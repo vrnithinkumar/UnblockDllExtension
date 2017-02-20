@@ -14,6 +14,7 @@ namespace UnlockDll
         #region Private Fields
         private const string PatternForPath = @"'[^']+'";
         private const string StringToSearch = "Access to the path";
+        private const string StringToSearchAccessFile = "The process cannot access the file";
         private const string SuccessReadOnlyMessage = "Success - File : {0}, Removed ReadOnly attribute.\n";
         private const string SuccessHiddenMessage = "Success - File : {0}, Removed Hidden attribute.\n";
         private const string ErrorFileNotFoundMessage = "Error - File : {0} does not exist ! \n";
@@ -72,7 +73,7 @@ namespace UnlockDll
             foreach (var error in errors)
             {
                 string decription = error.Description;
-                if (decription.Contains(StringToSearch))
+                if (decription.Contains(StringToSearch)|| decription.Contains(StringToSearchAccessFile))
                 {
                     var dllPath = PathToDllFromError(decription).Replace("'", "");
                     if (System.IO.Path.IsPathRooted(dllPath))
