@@ -3,7 +3,9 @@
   <Metadata>
     <Identity Id="aee1ca98-a39a-4986-ba81-a36603ff6e02" Version="0.10" Language="en-US" Publisher="vrnithinkumar" />
     <DisplayName>UnBlockDllExtension</DisplayName>
-    <Description xml:space="preserve">Helps to remove Hidden and ReadOnly attribute from dll's which are causing error to build project.</Description>
+    <Description xml:space="preserve">Helps to remove Hidden and ReadOnly attribute from dll's which are causing error to build project.
+Details : https://github.com/vrnithinkumar/UnblockDllExtension</Description>
+    <MoreInfo>https://github.com/vrnithinkumar/UnblockDllExtension</MoreInfo>
     <License>License.txt</License>
     <Icon>Unblock.png</Icon>
     <PreviewImage>Unblock.png</PreviewImage>
