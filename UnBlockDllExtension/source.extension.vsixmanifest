@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
   <Metadata>
-    <Identity Id="UnBlockDllExtension.vrnithinkumar.aee1ca98-a39a-4986-ba81-a36603ff6e02" Version="0.10" Language="en-US" Publisher="vrnithinkumar" />
+    <Identity Id="aee1ca98-a39a-4986-ba81-a36603ff6e02" Version="0.10" Language="en-US" Publisher="vrnithinkumar" />
     <DisplayName>UnBlockDllExtension</DisplayName>
-    <Description xml:space="preserve">Visual Studio Extension to Un block dll .</Description>
+    <Description xml:space="preserve">Helps to remove Hidden and ReadOnly attribute from dll's which are causing error to build project.</Description>
     <License>License.txt</License>
     <Icon>Unblock.png</Icon>
     <PreviewImage>Unblock.png</PreviewImage>

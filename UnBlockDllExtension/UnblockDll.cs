@@ -7,8 +7,10 @@
 using System;
 using System.ComponentModel.Design;
 using System.Globalization;
+using EnvDTE80;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
+using UnlockDll;
 
 namespace UnBlockDllExtension
 {
@@ -93,14 +95,14 @@ namespace UnBlockDllExtension
         /// <param name="e">Event args.</param>
         private void MenuItemCallback(object sender, EventArgs e)
         {
-            string message = string.Format(CultureInfo.CurrentCulture, "Inside {0}.MenuItemCallback()", this.GetType().FullName);
-            string title = "UnblockDll";
-
+            DTE2 dte2 = ServiceProvider.GetService(typeof(EnvDTE.DTE)) as DTE2;
+            var unblocker = new DllUnblocker(dte2);
+            var result = unblocker.UnblockAllDlls();
             // Show a message box to prove we were here
             VsShellUtilities.ShowMessageBox(
                 this.ServiceProvider,
-                message,
-                title,
+                result,
+                "Result !",
                 OLEMSGICON.OLEMSGICON_INFO,
                 OLEMSGBUTTON.OLEMSGBUTTON_OK,
                 OLEMSGDEFBUTTON.OLEMSGDEFBUTTON_FIRST);
