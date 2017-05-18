@@ -92,7 +92,7 @@ namespace UnlockDll
             return listOfSelecteedItems;
         }
 
-        private string PathToDllFromError(string errorMessage)
+        private static string PathToDllFromError(string errorMessage)
         {
             Regex r = new Regex(PatternForPath, RegexOptions.IgnoreCase);
             Match m = r.Match(errorMessage);
@@ -104,7 +104,7 @@ namespace UnlockDll
             return path;
         }
 
-        private string RemoveBlockingAttributes(string pathToDll)
+        private static string RemoveBlockingAttributes(string pathToDll)
         {
             string result = string.Empty;
             if (!File.Exists(pathToDll))
@@ -136,7 +136,6 @@ namespace UnlockDll
         {
             return attributes & ~attributesToRemove;
         }
-
         #endregion
     }
 }
