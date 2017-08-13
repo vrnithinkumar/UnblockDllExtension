@@ -1,6 +1,8 @@
 # Unblock Dll Extension
 [![Build status](https://ci.appveyor.com/api/projects/status/m0c5jon7550w6c8r?svg=true)](https://ci.appveyor.com/project/vrnithinkumar/unblockdllextension)<br />
-A tiny helper to remove the <b>ReadOnly</b> and <b>Hidden</b> attribute from dll's and executeables which blocking the Visual Studio from building the project.<br />
+A tiny helper to remove the <b>ReadOnly</b> and <b>Hidden</b> attribute from dll's and executeables which blocking the Visual Studio from building the project.
+[Link to download](https://marketplace.visualstudio.com/items?itemName=NithinVR.UnBlockDllExtension)
+<br />
 ## No Access Error in Visual Studio
 No Access to the path error look like this:
 ![Alt text](Documentation/NoAccessError.PNG?raw=true "No Access Error.")<br />
